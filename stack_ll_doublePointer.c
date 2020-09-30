@@ -48,6 +48,14 @@ void display(Node** s){
     printf("\n");
 }
 
+void recurPrint(Node **s){
+    Node* t = (*s);
+    if(t == NULL) return;
+    recurPrint(t->next);
+    printf("%d ", t->data);
+}
+
+
 int main(){
     Node *f = NULL;
     push(&f, 10);

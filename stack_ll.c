@@ -59,6 +59,13 @@ void display(Stack* s){
     printf("\n");
 }
 
+void recurPrint(Node *s){
+    Node* t = s;
+    if(t == NULL) return;
+    recurPrint(t->next);
+    printf("%d ", t->data);
+}
+
 int main(){
     Stack stack;
     Stack* s = &stack;
